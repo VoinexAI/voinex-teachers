@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
-export async function proxy(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
   const token = request.cookies.get('authToken')?.value
   
